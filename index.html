@@ -7,6 +7,7 @@
     <title>Misha Qader | IT Student & Flutter Developer</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -21,7 +22,6 @@
             line-height: 1.7;
         }
 
-        /* Navigation */
         nav {
             position: sticky;
             top: 0;
@@ -57,7 +57,6 @@
             color: #69a7ff;
         }
 
-        /* General */
         section {
             padding: 80px 10%;
         }
@@ -81,7 +80,8 @@
             color: #b9c5d8;
         }
 
-        /* Hero */
+        /* HERO */
+
         .hero {
             min-height: 90vh;
             display: flex;
@@ -142,7 +142,8 @@
             color: #08111f;
         }
 
-        /* About */
+        /* ABOUT */
+
         .about-box {
             background: #111b2e;
             border: 1px solid #263653;
@@ -154,7 +155,8 @@
             margin-bottom: 15px;
         }
 
-        /* Skills */
+        /* SKILLS */
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -176,91 +178,37 @@
             transform: translateY(-3px);
         }
 
-        /* Education */
-        <section id="education">
-    <div class="container">
+        /* EDUCATION */
 
-        <h2>Education</h2>
+        .education-grid {
+            display: grid;
+            gap: 25px;
+        }
 
-        <div class="education-grid">
+        .education-card {
+            background: #111b2e;
+            border-left: 4px solid #69a7ff;
+            padding: 25px;
+            border-radius: 8px;
+        }
 
-            <!-- BSIT -->
-            <div class="education-card">
+        .education-card h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
 
-                <h3>BS Information Technology</h3>
+        .education-card .year {
+            color: #69a7ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-                <div class="year">
-                    2023 – 2027
-                </div>
+        .education-card p {
+            margin-bottom: 6px;
+        }
 
-                <p>
-                    <strong>University of the Punjab</strong>
-                </p>
+        /* PROJECTS */
 
-                <p>
-                    Punjab University College of Information Technology (PUCIT)
-                </p>
-
-            </div>
-
-            <!-- Intermediate -->
-            <div class="education-card">
-
-                <h3>Intermediate — ICS</h3>
-
-                <div class="year">
-                    2021 – 2023
-                </div>
-
-                <p>
-                    <strong>Army Public School and Colleges</strong>
-                </p>
-
-                <p>
-                    Completed Intermediate in ICS with Computer Science.
-                </p>
-
-                <p>
-                    <strong>Grade:</strong> A*
-                </p>
-
-            </div>
-
-            <!-- School -->
-            <div class="education-card">
-
-                <h3>School Education</h3>
-
-                <div class="year">
-                    Completed in 2021
-                </div>
-
-                <p>
-                    <strong>SKANS International Schools</strong>
-                </p>
-
-                <p>
-                    Major Subjects: Computer Science, Mathematics, Physics
-                </p>
-
-                <p>
-                    <strong>Grade:</strong> A*
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-           
-
-
-     
-           
-
-        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -294,7 +242,8 @@
             margin-bottom: 7px;
         }
 
-        /* Courses */
+        /* COURSES */
+
         .course-card {
             background: #111b2e;
             border: 1px solid #263653;
@@ -323,7 +272,8 @@
             font-size: 14px;
         }
 
-        /* Contact */
+        /* CONTACT */
+
         .contact-box {
             background: #111b2e;
             border: 1px solid #263653;
@@ -348,7 +298,8 @@
             text-decoration: underline;
         }
 
-        /* Footer */
+        /* FOOTER */
+
         footer {
             text-align: center;
             padding: 30px 10%;
@@ -360,7 +311,8 @@
             font-size: 14px;
         }
 
-        /* Responsive */
+        /* MOBILE */
+
         @media (max-width: 768px) {
 
             nav {
@@ -393,30 +345,62 @@
             h2 {
                 font-size: 28px;
             }
+
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+
+    <!-- NAVIGATION -->
+
     <nav>
-        <div class="logo">Misha Qader</div>
+
+        <div class="logo">
+            Misha Qader
+        </div>
 
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#courses">Courses</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
+
     </nav>
 
 
-    <!-- Hero -->
+    <!-- HOME -->
+
     <section id="home" class="hero">
+
         <div class="container hero-content">
 
             <h1>
@@ -434,18 +418,28 @@
                 and transforming requirements into practical digital solutions.
             </p>
 
-            <a href="#projects" class="btn">View My Projects</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
 
         </div>
+
     </section>
 
 
-    <!-- About -->
+    <!-- ABOUT -->
+
     <section id="about">
+
         <div class="container">
 
-            <h2>About Me</h2>
+            <h2>
+                About Me
+            </h2>
 
             <div class="about-box">
 
@@ -474,87 +468,223 @@
                 </p>
 
                 <p>
+                    I enjoy learning new technologies, exploring different
+                    approaches, and completing my work with dedication and
+                    responsibility.
+                </p>
+
+                <p>
                     My current focus is on Flutter, mobile app development,
-                    Dart, Firebase, and Cloud Firestore. My goal is to grow
-                    as a software and mobile application developer and build
-                    valuable digital solutions.
+                    Dart, Firebase, and Cloud Firestore.
+                </p>
+
+                <p>
+                    My goal is to grow as a software and mobile application
+                    developer and build valuable digital solutions.
                 </p>
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- Skills -->
+    <!-- SKILLS -->
+
     <section id="skills">
+
         <div class="container">
 
-            <h2>Skills</h2>
+            <h2>
+                Skills
+            </h2>
 
             <div class="skills-grid">
 
                 <div class="skill">Flutter</div>
+
                 <div class="skill">Dart</div>
+
                 <div class="skill">Firebase</div>
+
                 <div class="skill">Cloud Firestore</div>
+
                 <div class="skill">Android Development</div>
-                <div class="skill">Object-Oriented Programming</div>
-                <div class="skill">Data Structures & Algorithms</div>
-                <div class="skill">SQL & Databases</div>
-                <div class="skill">Information Security</div>
-                <div class="skill">Cybersecurity</div>
-                <div class="skill">Software Requirements Engineering</div>
-                <div class="skill">Git & GitHub</div>
-                <div class="skill">VS Code</div>
-                <div class="skill">Android Studio</div>
 
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Education -->
-    <section id="education">
-        <div class="container">
-
-            <h2>Education</h2>
-
-            <div class="education-card">
-
-                <h3>BS Information Technology</h3>
-
-                <div class="year">
-                    2023 – 2027
+                <div class="skill">
+                    Object-Oriented Programming
                 </div>
 
-                <p>
-                    University of the Punjab
-                </p>
+                <div class="skill">
+                    Data Structures & Algorithms
+                </div>
 
-                <p>
-                    Punjab University College of Information Technology (PUCIT)
-                </p>
+                <div class="skill">
+                    SQL & Databases
+                </div>
+
+                <div class="skill">
+                    Information Security
+                </div>
+
+                <div class="skill">
+                    Cybersecurity
+                </div>
+
+                <div class="skill">
+                    Software Requirements Engineering
+                </div>
+
+                <div class="skill">
+                    Git & GitHub
+                </div>
+
+                <div class="skill">
+                    VS Code
+                </div>
+
+                <div class="skill">
+                    Android Studio
+                </div>
 
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- Projects -->
-    <section id="projects">
+    <!-- EDUCATION -->
+
+    <section id="education">
+
         <div class="container">
 
-            <h2>Projects</h2>
+            <h2>
+                Education
+            </h2>
+
+            <div class="education-grid">
+
+
+                <!-- BSIT -->
+
+                <div class="education-card">
+
+                    <h3>
+                        BS Information Technology
+                    </h3>
+
+                    <div class="year">
+                        2023 – 2027
+                    </div>
+
+                    <p>
+                        <strong>
+                            University of the Punjab
+                        </strong>
+                    </p>
+
+                    <p>
+                        Punjab University College of Information Technology (PUCIT)
+                    </p>
+
+                </div>
+
+
+                <!-- INTERMEDIATE -->
+
+                <div class="education-card">
+
+                    <h3>
+                        Intermediate — ICS
+                    </h3>
+
+                    <div class="year">
+                        2021 – 2023
+                    </div>
+
+                    <p>
+                        <strong>
+                            Army Public School and Colleges
+                        </strong>
+                    </p>
+
+                    <p>
+                        Completed Intermediate in ICS with Computer Science.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Grade:
+                        </strong>
+                        A*
+                    </p>
+
+                </div>
+
+
+                <!-- SCHOOL -->
+
+                <div class="education-card">
+
+                    <h3>
+                        School Education
+                    </h3>
+
+                    <div class="year">
+                        Completed in 2021
+                    </div>
+
+                    <p>
+                        <strong>
+                            SKANS International Schools
+                        </strong>
+                    </p>
+
+                    <p>
+                        Major Subjects:
+                        Computer Science, Mathematics, Physics
+                    </p>
+
+                    <p>
+                        <strong>
+                            Grade:
+                        </strong>
+                        A*
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2>
+                Projects
+            </h2>
 
             <div class="projects-grid">
 
-                <!-- Blood Camp -->
+
+                <!-- BLOOD CAMP -->
+
                 <div class="project-card">
 
-                    <h3>Blood Camp Management App</h3>
+                    <h3>
+                        Blood Camp Management App
+                    </h3>
 
                     <div class="project-meta">
                         2026 • Bano Qabil Mobile App Development
@@ -567,29 +697,62 @@
                     </p>
 
                     <ul>
-                        <li>Developed the Camp Staff module.</li>
-                        <li>Staff login and authentication.</li>
-                        <li>Donor search and identification.</li>
-                        <li>Donor screening and eligibility checking.</li>
-                        <li>Donation submission and blood collection workflow.</li>
-                        <li>Donor status management.</li>
-                        <li>Firebase and Cloud Firestore integration.</li>
-                        <li>Integration with other application modules.</li>
+
+                        <li>
+                            Developed the Camp Staff module.
+                        </li>
+
+                        <li>
+                            Staff login and authentication.
+                        </li>
+
+                        <li>
+                            Donor search and identification.
+                        </li>
+
+                        <li>
+                            Donor screening and eligibility checking.
+                        </li>
+
+                        <li>
+                            Donation submission and blood collection workflow.
+                        </li>
+
+                        <li>
+                            Donor status management.
+                        </li>
+
+                        <li>
+                            Firebase and Cloud Firestore integration.
+                        </li>
+
+                        <li>
+                            Integration with other application modules.
+                        </li>
+
                     </ul>
 
                     <p style="margin-top: 15px;">
-                        <strong>My Focus:</strong>
+
+                        <strong>
+                            My Focus:
+                        </strong>
+
                         Understanding staff requirements and creating a
                         practical workflow for blood camp staff.
+
                     </p>
 
                 </div>
 
 
-                <!-- Aurelia -->
+                <!-- AURELIA GRAND -->
+
                 <div class="project-card">
 
-                    <h3>Aurelia Grand Hotel</h3>
+                    <h3>
+                        Aurelia Grand Hotel
+                    </h3>
 
                     <div class="project-meta">
                         2026 • Flutter Application
@@ -602,39 +765,77 @@
                     </p>
 
                     <ul>
-                        <li>Customer dashboard.</li>
-                        <li>Restaurant services.</li>
-                        <li>Decoration services.</li>
-                        <li>Health club services.</li>
-                        <li>Hotel information and Our Story section.</li>
-                        <li>Official Conferences module.</li>
-                        <li>Conference booking functionality.</li>
-                        <li>Firebase and Cloud Firestore booking data.</li>
+
+                        <li>
+                            Customer dashboard.
+                        </li>
+
+                        <li>
+                            Restaurant services.
+                        </li>
+
+                        <li>
+                            Decoration services.
+                        </li>
+
+                        <li>
+                            Health club services.
+                        </li>
+
+                        <li>
+                            Hotel information and Our Story section.
+                        </li>
+
+                        <li>
+                            Official Conferences module.
+                        </li>
+
+                        <li>
+                            Conference booking functionality.
+                        </li>
+
+                        <li>
+                            Firebase and Cloud Firestore booking data.
+                        </li>
+
                     </ul>
 
                     <p style="margin-top: 15px;">
-                        <strong>My Focus:</strong>
+
+                        <strong>
+                            My Focus:
+                        </strong>
+
                         Clean user-friendly interface, modular organization,
                         Flutter navigation, and Firebase integration.
+
                     </p>
 
                 </div>
 
+
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- Courses -->
+    <!-- COURSES & TRAINING -->
+
     <section id="courses">
+
         <div class="container">
 
-            <h2>Courses & Training</h2>
+            <h2>
+                Courses & Training
+            </h2>
 
             <div class="course-card">
 
-                <h3>Bano Qabil — Mobile App Development</h3>
+                <h3>
+                    Bano Qabil — Mobile App Development
+                </h3>
 
                 <div class="course-info">
                     2026 • Course Completed
@@ -655,25 +856,35 @@
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- Contact -->
+    <!-- CONTACT -->
+
     <section id="contact">
+
         <div class="container">
 
-            <h2>Contact Me</h2>
+            <h2>
+                Contact Me
+            </h2>
 
             <div class="contact-box">
 
+
                 <div class="contact-item">
-                    <strong>Email:</strong>
-                    <a href="mailto:mishaqader051@gmail.com">
-                        mishaqader051@gmail.com
-                    </a>
+
+                    <strong>
+                        Email:
+                    </strong>
+
+                    <a href="mailto:mishaqader051@gmailcom">
+                        mishaqader051@gmailcom
+                        </a>
                 </div>
 
-
+            
 
                 <div class="contact-item">
                     <strong>LinkedIn:</strong>
