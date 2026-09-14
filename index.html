@@ -1,236 +1,636 @@
-<div class="project-card">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <h3>
-        Aurelia Grand Hotel
-    </h3>
+    <title>Misha Qader | IT Student & Flutter Developer</title>
 
-    <div class="project-meta">
-        2026 • Flutter Application
-    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    <span class="status">
-        Development Project
-    </span>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1220;
+            color: #e8edf5;
+            line-height: 1.7;
+        }
 
-    <p>
-        Aurelia Grand Hotel is a Flutter-based hotel management and
-        customer service application designed to provide users with a
-        convenient digital platform for exploring hotel facilities and
-        services.
-    </p>
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111b2e;
+            border-bottom: 1px solid #263653;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    <p>
-        The application brings different hotel services together in a
-        single interface, allowing customers to explore restaurants,
-        decorations, health club facilities, hotel information and
-        official conference services.
-    </p>
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #69a7ff;
+        }
 
-    <p>
-        One of the important parts of the application is the Official
-        Conferences module, which allows users to explore available
-        conference options and submit booking information. Firebase and
-        Cloud Firestore are used to manage conference-related booking
-        data.
-    </p>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
 
-    <p>
-        While developing this project, I focused on creating a clean,
-        user-friendly interface and understanding how different hotel
-        services can be organized into separate modules while still
-        working together as one application.
-    </p>
+        nav ul li a {
+            color: #dce6f7;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
 
-    <strong>Key Features:</strong>
+        nav ul li a:hover {
+            color: #69a7ff;
+        }
 
-    <ul>
+        /* General */
+        section {
+            padding: 80px 10%;
+        }
 
-        <li>
-            Customer Dashboard
-        </li>
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
 
-        <li>
-            Restaurant Services
-        </li>
+        h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #69a7ff;
+        }
 
-        <li>
-            Decorations Services
-        </li>
+        h3 {
+            color: #ffffff;
+        }
 
-        <li>
-            Health Club
-        </li>
+        p {
+            color: #b9c5d8;
+        }
 
-        <li>
-            Our Story / Hotel Information
-        </li>
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0b1220, #14233c);
+        }
 
-        <li>
-            Official Conferences
-        </li>
+        .hero-content {
+            max-width: 800px;
+        }
 
-        <li>
-            Conference Booking
-        </li>
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
 
-        <li>
-            Booking Data Management through Firebase
-        </li>
+        .hero h1 span {
+            color: #69a7ff;
+        }
 
-        <li>
-            Cloud Firestore Integration
-        </li>
+        .hero h2 {
+            font-size: 24px;
+            color: #cbd8eb;
+            margin-bottom: 20px;
+        }
 
-    </ul>
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
 
-    <p>
-        <strong>My Learning:</strong>
-        This project has strengthened my understanding of Flutter UI
-        development, application navigation, modular design, Firebase
-        integration, Cloud Firestore and converting service requirements
-        into a practical mobile application.
-    </p>
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #69a7ff;
+            color: #08111f;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
 
-    <div class="tech">
-        Technologies: Flutter • Dart • Firebase • Cloud Firestore
-    </div>
-</div>
-</div>
-</div>
-</section>
-!-- COURSES & TRAINING -->
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #8bbcff;
+        }
 
-    <section id="courses">
+        .btn-outline {
+            background: transparent;
+            color: #69a7ff;
+            border: 1px solid #69a7ff;
+        }
 
+        .btn-outline:hover {
+            background: #69a7ff;
+            color: #08111f;
+        }
+
+        /* About */
+        .about-box {
+            background: #111b2e;
+            border: 1px solid #263653;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .about-box p {
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .skill {
+            background: #111b2e;
+            border: 1px solid #263653;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            color: #dce6f7;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #69a7ff;
+            transform: translateY(-3px);
+        }
+
+        /* Education */
+        .education-card {
+            background: #111b2e;
+            border-left: 4px solid #69a7ff;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .education-card h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .education-card .year {
+            color: #69a7ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111b2e;
+            border: 1px solid #263653;
+            padding: 28px;
+            border-radius: 12px;
+        }
+
+        .project-card h3 {
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .project-card .project-meta {
+            color: #69a7ff;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-card ul {
+            margin: 15px 0 0 20px;
+            color: #b9c5d8;
+        }
+
+        .project-card li {
+            margin-bottom: 7px;
+        }
+
+        /* Courses */
+        .course-card {
+            background: #111b2e;
+            border: 1px solid #263653;
+            padding: 28px;
+            border-radius: 12px;
+        }
+
+        .course-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .course-info {
+            color: #69a7ff;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .certificate {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 8px 14px;
+            border-radius: 5px;
+            background: #263653;
+            color: #dce6f7;
+            font-size: 14px;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: #111b2e;
+            border: 1px solid #263653;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .contact-item {
+            margin: 15px 0;
+        }
+
+        .contact-item strong {
+            color: #ffffff;
+        }
+
+        .contact-item a {
+            color: #69a7ff;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 10%;
+            background: #070d17;
+            border-top: 1px solid #263653;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 60px 7%;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Misha Qader</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+
+            <h1>
+                Hi, I'm <span>Misha Qader</span>
+            </h1>
+
+            <h2>
+                BS Information Technology Student |
+                Aspiring Flutter & Mobile App Developer
+            </h2>
+
+            <p>
+                I am an enthusiastic Information Technology student passionate
+                about software development, mobile applications, problem-solving,
+                and transforming requirements into practical digital solutions.
+            </p>
+
+            <a href="#projects" class="btn">View My Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
         <div class="container">
 
-            <div class="section-title">
+            <h2>About Me</h2>
 
-                <h2>
-                    Courses & Training
-                </h2>
+            <div class="about-box">
 
                 <p>
-                    Additional learning and practical training
+                    I am a BS Information Technology student at the University
+                    of the Punjab with a strong interest in software development,
+                    mobile application development, and emerging technologies.
+                </p>
+
+                <p>
+                    I am an enthusiastic and dedicated learner who enjoys
+                    challenging myself through practical projects and
+                    real-world problem solving.
+                </p>
+
+                <p>
+                    I believe that good software is not just about writing code.
+                    It is about understanding the problem, identifying
+                    requirements, and creating a useful and easy-to-use solution.
+                </p>
+
+                <p>
+                    I enjoy understanding complete software requirements and
+                    considering the needs, expectations, and objectives of
+                    clients and end users.
+                </p>
+
+                <p>
+                    My current focus is on Flutter, mobile app development,
+                    Dart, Firebase, and Cloud Firestore. My goal is to grow
+                    as a software and mobile application developer and build
+                    valuable digital solutions.
                 </p>
 
             </div>
 
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill">Flutter</div>
+                <div class="skill">Dart</div>
+                <div class="skill">Firebase</div>
+                <div class="skill">Cloud Firestore</div>
+                <div class="skill">Android Development</div>
+                <div class="skill">Object-Oriented Programming</div>
+                <div class="skill">Data Structures & Algorithms</div>
+                <div class="skill">SQL & Databases</div>
+                <div class="skill">Information Security</div>
+                <div class="skill">Cybersecurity</div>
+                <div class="skill">Software Requirements Engineering</div>
+                <div class="skill">Git & GitHub</div>
+                <div class="skill">VS Code</div>
+                <div class="skill">Android Studio</div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+        <div class="container">
+
+            <h2>Education</h2>
+
+            <div class="education-card">
+
+                <h3>BS Information Technology</h3>
+
+                <div class="year">
+                    2023 – 2027
+                </div>
+
+                <p>
+                    University of the Punjab
+                </p>
+
+                <p>
+                    Punjab University College of Information Technology (PUCIT)
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Blood Camp -->
+                <div class="project-card">
+
+                    <h3>Blood Camp Management App</h3>
+
+                    <div class="project-meta">
+                        2026 • Bano Qabil Mobile App Development
+                    </div>
+
+                    <p>
+                        A Flutter-based application designed to digitally
+                        manage blood donation camp activities and organize
+                        donor information.
+                    </p>
+
+                    <ul>
+                        <li>Developed the Camp Staff module.</li>
+                        <li>Staff login and authentication.</li>
+                        <li>Donor search and identification.</li>
+                        <li>Donor screening and eligibility checking.</li>
+                        <li>Donation submission and blood collection workflow.</li>
+                        <li>Donor status management.</li>
+                        <li>Firebase and Cloud Firestore integration.</li>
+                        <li>Integration with other application modules.</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;">
+                        <strong>My Focus:</strong>
+                        Understanding staff requirements and creating a
+                        practical workflow for blood camp staff.
+                    </p>
+
+                </div>
+
+
+                <!-- Aurelia -->
+                <div class="project-card">
+
+                    <h3>Aurelia Grand Hotel</h3>
+
+                    <div class="project-meta">
+                        2026 • Flutter Application
+                    </div>
+
+                    <p>
+                        A Flutter-based hotel management and customer service
+                        application that brings multiple hotel services
+                        together in one digital platform.
+                    </p>
+
+                    <ul>
+                        <li>Customer dashboard.</li>
+                        <li>Restaurant services.</li>
+                        <li>Decoration services.</li>
+                        <li>Health club services.</li>
+                        <li>Hotel information and Our Story section.</li>
+                        <li>Official Conferences module.</li>
+                        <li>Conference booking functionality.</li>
+                        <li>Firebase and Cloud Firestore booking data.</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;">
+                        <strong>My Focus:</strong>
+                        Clean user-friendly interface, modular organization,
+                        Flutter navigation, and Firebase integration.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Courses -->
+    <section id="courses">
+        <div class="container">
+
+            <h2>Courses & Training</h2>
 
             <div class="course-card">
 
-                <h3>
-                    Bano Qabil — Mobile App Development
-                </h3>
+                <h3>Bano Qabil — Mobile App Development</h3>
+
+                <div class="course-info">
+                    2026 • Course Completed
+                </div>
 
                 <p>
-                    <strong>Year:</strong> 2026
+                    Completed a practical Mobile App Development course
+                    with exposure to Flutter and mobile application
+                    development. The course strengthened my understanding
+                    of mobile development concepts and practical project
+                    development.
                 </p>
 
-                <p>
-                    <strong>Course Status:</strong> Completed
-                </p>
-
-                <p>
-                    I completed the Mobile App Development course offered
-                    through Bano Qabil, where I gained practical exposure
-                    to mobile application development and Flutter-based
-                    application development.
-                </p>
-
-                <p>
-                    The course helped strengthen my understanding of
-                    mobile application concepts, Flutter development,
-                    application design and practical project development.
-                    It also provided an opportunity to work on a
-                    real-world-oriented Blood Camp Management App.
-                </p>
-
-                <span class="pending">
+                <div class="certificate">
                     Certificate Pending / Not Yet Received
-                </span>
+                </div>
 
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- CONTACT -->
-
+    <!-- Contact -->
     <section id="contact">
-
         <div class="container">
 
-            <div class="section-title">
-
-                <h2>
-                    Contact Me
-                </h2>
-
-                <p>
-                    Let's connect
-                </p>
-
-            </div>
-
+            <h2>Contact Me</h2>
 
             <div class="contact-box">
 
-                <p>
-
+                <div class="contact-item">
                     <strong>Email:</strong>
-
-                    <a href="mishaqader051@gmail.com">
-
+                    <a href="mailto:mishaqader051@gmail.com">
                         mishaqader051@gmail.com
-
                     </a>
+                </div>
 
-                </p>
 
 
-                <p>
-
+                <div class="contact-item">
                     <strong>LinkedIn:</strong>
-
-                    <a
-                        href="https://www.linkedin.com/in/misha-qader-281706328?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                        target="_blank"
-                    >
-
+                    <a href="https://www.linkedin.com/in/misha-qader-281706328?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
                         LinkedIn Profile
-
                     </a>
+                </div>
 
-                </p>
-
-
-                <p>
-
+                <div class="contact-item">
                     <strong>GitHub:</strong>
-
-                    <a
-                        href="https://github.com/MishaQader"
-                        target="_blank"
-                    >
-
+                    <a href="https://github.com/MishaQader" target="_blank">
                         GitHub Profile
-
                     </a>
-
-                </p>
+                </div>
 
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- FOOTER -->
-
+    <!-- Footer -->
     <footer>
 
         <p>
@@ -238,14 +638,10 @@
         </p>
 
         <p>
-            BS Information Technology Student |
-            Aspiring Flutter & Mobile App Developer
+            BSIT Student | Aspiring Flutter & Mobile App Developer
         </p>
 
     </footer>
 
-
 </body>
 </html>
-
-</div>
